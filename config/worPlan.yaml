@@ -1,0 +1,23 @@
+save:
+    -
+      - 2022-2023秋学期
+      - 1
+      - <h3>asfadsfsdfasdfasdfasdfsdsfsdfsdfsdffasfdas</h3>
+      - save
+      - https://ssl7.test.fhsljy.com/file/work/20221125/1e57e483b93b4556bf3583766032121c.pptx
+      - Java编程第10课-接口与多态、访问权限.pptx
+update:
+    -
+      - 2022-2023秋学期
+      - 1
+      - <h3>修改优秀作业方案上报</h3>
+      - save
+      - https://ssl7.test.fhsljy.com/file/work/20221125/62dc480edee345efb20f0b65f4cb856a.pptx
+      - Java编程第2课-运算与逻辑控制.pptx
+    -
+      - 2022-2023秋学期
+      - 1
+      - <h3>修改并且提交作业方案上报</h3>
+      - update
+      - https://ssl7.test.fhsljy.com/file/work/20221125/62dc480edee345efb20f0b65f4cb856a.pptx
+      - Java编程第2课-运算与逻辑控制.pptx
