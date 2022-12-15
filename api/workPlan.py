@@ -77,6 +77,7 @@ class workPlan(baseApi):
 		return self.send(data)
 	
 	def info_workPlan(self, id):
+		#作业方案详情接口
 		data = {
 			"method": "get",
 			"url": "https://" + self.set_url() + "/custom/api/v1/workPlan/info/"+id,

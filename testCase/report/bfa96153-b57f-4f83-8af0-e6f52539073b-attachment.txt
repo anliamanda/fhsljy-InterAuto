@@ -1,3 +1,0 @@
-DEBUG    urllib3.connectionpool:connectionpool.py:1001 Starting new HTTPS connection (1): ssl7.test.fhsljy.com:443
-DEBUG    urllib3.connectionpool:connectionpool.py:456 https://ssl7.test.fhsljy.com:443 "POST /gateway/custom/api/v1/workPlan/page HTTP/1.1" 200 None
-INFO     root:log.py:42 修改作业方案保存

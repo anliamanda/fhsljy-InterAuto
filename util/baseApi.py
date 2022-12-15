@@ -1,5 +1,6 @@
 import os
 
+import pystache
 import requests
 import yaml
 
@@ -15,15 +16,14 @@ class baseApi:
 		return requests.request(**data).json()
 		
 	def set_url(self):
-		if os.path.exists("../config/env.yaml"):
-			self.env =yaml.safe_load(open("../config/env.yaml"))
+		if os.path.exists("./config/env.yaml"):
+			self.env =yaml.safe_load(open("./config/env.yaml"))
 			url=self.env["ksedu"][self.env["default"]]
 		return url
 	
 		
 	def userinfo(self):
-		data=yaml.safe_load(open("../config/login.yaml"))
-		print(self.send(data))
+		data=yaml.safe_load(open("./config/login.yaml"))
 		return self.send(data)
 	
 	def write_userinfo(self):
@@ -40,16 +40,16 @@ class baseApi:
 			
 		}
 		allow_unicode = True
-		with open("../config/userinfo.yaml", "w",encoding="utf-8") as f:
+		with open("./config/userinfo.yaml", "w",encoding="utf-8") as f:
 			yaml.safe_dump(data=data, stream=f,allow_unicode = True)
 			
 	def get_userinfo(self):
-		if os.path.exists("../config/userinfo.yaml"):
-			with open("../config/userinfo.yaml", "r",encoding="utf-8") as f:
+		if os.path.exists("./config/userinfo.yaml"):
+			with open("./config/userinfo.yaml", "r",encoding="utf-8") as f:
 				data = yaml.load(f,Loader=yaml.FullLoader)
 		else:
 			self.write_userinfo()
-			with open("../config/userinfo.yaml", "r",encoding="utf-8") as f:
+			with open("./config/userinfo.yaml", "r",encoding="utf-8") as f:
 				data = yaml.load(f,Loader=yaml.FullLoader)
 		return data
 	
@@ -91,6 +91,13 @@ class baseApi:
 			for key,value in data.items():
 				print(key+":"+value)
 				print(key(keyword))
+	
+	def newData(path, newdata):
+		with open(path, 'r', encoding='utf-8') as f:
+			contect = f.read()
+			re_contect = pystache.render(contect, **newdata)
+			
+			return re_contect
 
 	
 if __name__ == '__main__':

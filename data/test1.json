@@ -1,0 +1,11 @@
+{
+    "userid": "{{userid}}",
+    "name": "{{name}}",
+    "department": [1, 2],
+    "mobile": "{{phone}}",
+    "data": {
+      "records": [
+        {"userid":"{{userid}}"}
+      ]
+    }
+}

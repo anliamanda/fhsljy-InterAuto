@@ -10,7 +10,7 @@ import pytest
 from testCase.testBase import TestBase
 
 from api.workReport import workReport
-class Testcase(TestBase):
+class TestWorkReport(TestBase):
 	workReport=workReport()
 	
 	@allure.feature("工作上报记录是否存在")
